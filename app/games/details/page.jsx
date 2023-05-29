@@ -1,3 +1,9 @@
+import LandingPageLayout from "@/app/layouts/LandingPageLayout";
+
 export default function gametDetails() {
-    return <p>helo game details</p>;
+    return (
+        <LandingPageLayout>
+            <h1>helo game detail</h1>;
+        </LandingPageLayout>
+    );
 }
