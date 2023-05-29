@@ -1,4 +1,8 @@
+"use client"
+
 import LandingPageLayout from "../layouts/LandingPageLayout";
+import { Col, Row, Card, Button } from "react-bootstrap";
+import Link from "next/link";
 
 const getApiGame = async () => {
     const response = await fetch('https://binarwave30team1-be-production-deb9.up.railway.app/games/rooms');
@@ -13,31 +17,30 @@ const Games = async () => {
     console.log(game);
 
     return (
-        <div>
+        <div >
             <LandingPageLayout>
-                <table className="table w-full">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Description</th>
-                            <th>Thumnail URL</th>
-                            <th>Game URL</th>
-                            <th>Play Cout</th>
-                        </tr>
-                    </thead>
-                    <tbody>
+                    <Row className="pt-5 px-3 gap-3 m-0 justify-content-center">
                         {game.map((item) => (
-                            <tr key={item.id}>
-                                <td>{item.Name}</td>
-                                <td>{item.Description}</td>
-                                <td>{item.thumbnail_url}</td>
-                                <td>{item.Game_url}</td>
-                                <td>{item.play_count}</td>
-                            </tr>
+                            <Col 
+                            xs={12}
+                            sm={6}
+                            md={4}
+                            lg={3}
+                            className=" d-flex justify-content-center p-0 m-0">
+                            <Card style={{ width: "100%" }}>
+                                <Card.Img variant="top" height={200} src={item.thumbnail_url} />
+                                <Card.Body>
+                                    <Card.Title>{item.Name}</Card.Title>
+                                    <Card.Text>{item.Description}</Card.Text>
+                                    <Card.Text>Play Count : {item.play_count}</Card.Text>
+                                    <Link href="/games/details">
+                                        <Button variant="primary">View More</Button>
+                                    </Link>
+                                </Card.Body>
+                            </Card>
+                            </Col>
                         ))}
-                    </tbody>
-                </table>
-               
+                    </Row>
             </LandingPageLayout>
         </div>
     );
