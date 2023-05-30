@@ -3,19 +3,11 @@
 import LandingPageLayout from "../layouts/LandingPageLayout";
 import { Col, Row, Card, Button } from "react-bootstrap";
 import Link from "next/link";
-
-const getApiGame = async () => {
-    const response = await fetch('https://binarwave30team1-be-production-deb9.up.railway.app/games/rooms');
-    const data = await response.json();
-    const room = await data.rooms
-
-    return room;
-};
+import { getApiGame } from "../api/GameController";
 
 const Games = async () => {
     const game = await getApiGame();
-    console.log(game);
-
+    
     return (
         <div >
             <LandingPageLayout>
@@ -33,7 +25,7 @@ const Games = async () => {
                                     <Card.Title>{item.Name}</Card.Title>
                                     <Card.Text>{item.Description}</Card.Text>
                                     <Card.Text>Play Count : {item.play_count}</Card.Text>
-                                    <Link href="/games/details">
+                                    <Link href={`/games/${item.id}`}>
                                         <Button variant="primary">View More</Button>
                                     </Link>
                                 </Card.Body>
