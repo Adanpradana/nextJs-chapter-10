@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
+import bg from "../../public/user.png"
 
 export default function CustomNavbar() {
     return (
@@ -44,16 +46,19 @@ export default function CustomNavbar() {
                         <Link href={"/about"}>About</Link>
                     </li>
                     <li>
-                        <Link href={"/contact"}>Contact</Link>
+                        <Link href={"/games"}>Games</Link>
                     </li>
                     <li>
-                        <Link href={"/games"}>Games</Link>
+                        <Link href={"/contact"}>Contact</Link>
                     </li>
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link href={"/auth/login"} className="btn">
-                    Get Started
+                <Link href={"/auth/login"}>
+                    <Image 
+                    style={{ width: 40, height: 40, marginRight: 10}}
+                    rounded
+                    src={bg} />
                 </Link>
             </div>
         </div>
