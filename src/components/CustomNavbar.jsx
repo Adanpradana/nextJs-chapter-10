@@ -53,14 +53,23 @@ export default function CustomNavbar() {
                         </li>
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+                <a className="btn btn-ghost normal-case text-xl">GoodGame</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     <li>
-                        <a>Item 1</a>
+                        <a href="/">Home</a>
                     </li>
-                    <li tabIndex={0}>
+                    <li>
+                        <a href="/aboutus">About Us</a>
+                    </li>
+                    <li>
+                        <a href="/games">Games</a>
+                    </li>
+                    <li>
+                        <a href="/contactus">Contact Us</a>
+                    </li>
+                    {/* <li tabIndex={0}>
                         <a>
                             Parent
                             <svg
@@ -81,14 +90,11 @@ export default function CustomNavbar() {
                                 <a>Submenu 2</a>
                             </li>
                         </ul>
-                    </li>
-                    <li>
-                        <a>Item 3</a>
-                    </li>
+                    </li> */}
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Get started</a>
+                <a className="btn">Login</a>
             </div>
         </div>
     );
