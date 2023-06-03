@@ -19,10 +19,16 @@ export default function CustomNavbar() {
           </label>
           <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
             <li>
-              <a>Item 1</a>
+              <Link href={"/"}>Home</Link>
             </li>
             <li>
-              <a>Item 3</a>
+              <Link href={"/about"}>About</Link>
+            </li>
+            <li>
+              <Link href={"/games"}>Games</Link>
+            </li>
+            <li>
+              <Link href={"/contact"}>Contact</Link>
             </li>
           </ul>
         </div>
