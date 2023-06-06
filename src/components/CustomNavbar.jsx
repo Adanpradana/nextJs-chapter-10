@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { BiUser } from "react-icons/bi";
 export default function CustomNavbar() {
   return (

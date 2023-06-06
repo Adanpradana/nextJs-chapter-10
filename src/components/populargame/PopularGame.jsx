@@ -15,11 +15,11 @@ export default function PopularGame() {
         backgroundImage: `url(${bgimg.src})`,
         backgroundSize:'cover',
         backgroundRepeat:'no-repeat',
-        width: '100vw',
+        width: '99vw',
         height: '120vh'
         }}>
 
-        <div className="items-center justify-center gap-4 grid grid-flow-col auto-cols-max font-bold text-5xl text-black pt-20 pb-20">MOST POPULAR GAME</div>
+        <div className="items-center justify-center gap-4 grid grid-flow-col auto-cols-max font-bold text-5xl text-gray pt-28 pb-20">MOST POPULAR GAME</div>
 
         {/* Cardgame */}
         <div className="items-center justify-center gap-4 grid grid-flow-col auto-cols-max">

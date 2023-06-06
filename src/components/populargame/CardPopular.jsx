@@ -1,4 +1,3 @@
-import img1 from "../../../public/game1.jpg"
 import Image from "next/image"
 
 export default function CardPopular({title, description, image}) {
@@ -12,7 +11,7 @@ export default function CardPopular({title, description, image}) {
             <h2 className="card-title">{title}</h2>
             <p>{description}</p>
             <div className="card-actions justify-end">
-            <button className="btn btn-primary">View Game</button>
+            <button className="btn btn-primary">View More</button>
             </div>
         </div>
         </div>
