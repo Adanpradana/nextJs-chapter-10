@@ -24,9 +24,17 @@ export default function CustomFooter() {
                 {/* part 2 */}
                 <div style={{width:'200px' }}>
                     <div className='pb-4 text-xl font-bold'>Menu</div>
-                    <Link href={"/"}>Home</Link>
-                    <Link href={"/about"}>About Us</Link>
-                    <Link href={"/games"}>Game</Link>
+                    <p>
+                        <a href='/home'>Home</a>
+                    </p>
+                    <p>
+                        <a href='/about'>About Us</a>
+                    </p>
+                    <p>
+                        <a href='/games'>Games</a>
+                    </p>
+                   
+                    
                 </div>
                 {/* part 3 */}
                 <div style={{width:'200px' }}>
