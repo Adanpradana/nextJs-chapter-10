@@ -9,7 +9,7 @@ export default function AboutUs() {
   return (
     <LandingPage>
       <main>
-        <div className="py-16 px-32">
+        <div className="py-16 px-32" >
           <div className="flex w-full justify-center items-center pb-16">
             <div className="text-center">
               <h1 className="font-semibold text-[2rem] pb-5">what we do</h1>
